@@ -71,3 +71,7 @@ class _FirstStartScreenState extends State<FirstStartScreen> {
     );
   }
 }
+
+//Вопросы
+// PageView баг со свайпом
+// Splash radius у кнопки

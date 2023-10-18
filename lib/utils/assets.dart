@@ -6,6 +6,7 @@ class Assets {
   static const String tLocationIcon = "assets/svg/location_icon.svg";
   static const String tAvatar = "assets/svg/avatar.svg";
   static const String tSearchIcon = "assets/svg/search_icon.svg";
+  static const String tTraveeIcon = "assets/svg/travee_icon.svg";
   //Svgs
   static const String tLocationImage = "assets/svg/location_image.svg";
   static const String tSnakeArrowImage = "assets/svg/snake_arrow_image.svg";

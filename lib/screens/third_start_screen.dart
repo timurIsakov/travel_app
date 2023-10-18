@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/screens/sign_in_screen.dart';
 
 import '../utils/assets.dart';
 import '../widget/swape_widget.dart';
@@ -43,7 +44,12 @@ class _ThirdStartScreenState extends State<ThirdStartScreen> {
             ),
             const SizedBox(height: 50),
             InkResponse(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SignInScreen()));
+              },
               splashColor: Colors.black,
               child: Container(
                 height: 72,
