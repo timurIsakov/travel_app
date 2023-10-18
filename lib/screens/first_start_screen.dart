@@ -21,7 +21,7 @@ class _FirstStartScreenState extends State<FirstStartScreen> {
 
     return Scaffold(
       body: PageView(
-          physics: const ClampingScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           pageSnapping: true,
           children: [
             Container(
@@ -70,8 +70,6 @@ class _FirstStartScreenState extends State<FirstStartScreen> {
           ]),
     );
   }
+
 }
 
-//Вопросы
-// PageView баг со свайпом
-// Splash radius у кнопки
