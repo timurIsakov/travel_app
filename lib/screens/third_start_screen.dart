@@ -5,7 +5,8 @@ import '../utils/assets.dart';
 import '../widget/swape_widget.dart';
 
 class ThirdStartScreen extends StatefulWidget {
-  const ThirdStartScreen({super.key});
+  final VoidCallback onTap;
+  const ThirdStartScreen({super.key, required this.onTap});
 
   @override
   State<ThirdStartScreen> createState() => _ThirdStartScreenState();
@@ -45,10 +46,7 @@ class _ThirdStartScreenState extends State<ThirdStartScreen> {
             const SizedBox(height: 50),
             InkResponse(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const SignInScreen()));
+                widget.onTap.call();
               },
               splashColor: Colors.black,
               child: Container(

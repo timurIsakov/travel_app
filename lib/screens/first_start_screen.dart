@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/screens/second_start_screen.dart';
+import 'package:travel_app/screens/sign_in_screen.dart';
 import 'package:travel_app/screens/third_start_screen.dart';
 import 'package:travel_app/utils/assets.dart';
 import 'package:travel_app/widget/circle_button_widget.dart';
@@ -14,6 +15,27 @@ class FirstStartScreen extends StatefulWidget {
 }
 
 class _FirstStartScreenState extends State<FirstStartScreen> {
+
+  late final PageController pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    // TODO: implement initState
+    pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    pageController.dispose();
+  }
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -21,6 +43,7 @@ class _FirstStartScreenState extends State<FirstStartScreen> {
 
     return Scaffold(
       body: PageView(
+        controller: pageController,
           physics: const NeverScrollableScrollPhysics(),
           pageSnapping: true,
           children: [
@@ -52,10 +75,12 @@ class _FirstStartScreenState extends State<FirstStartScreen> {
                   const SizedBox(height: 50),
                   CircleButtonWidget(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SecondStartScreen()));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => const SecondStartScreen()));
+
+                      pageController.nextPage(duration: const Duration(milliseconds: 300),curve: Curves.linear);
                     },
                     color: Colors.deepOrange,
                     icon: Icons.arrow_forward,
@@ -65,8 +90,18 @@ class _FirstStartScreenState extends State<FirstStartScreen> {
                 ],
               ),
             ),
-            const SecondStartScreen(),
-            const ThirdStartScreen()
+              SecondStartScreen(onTap: () {
+              pageController.nextPage(duration: const Duration(milliseconds: 300),curve: Curves.linear);
+
+            },),
+              ThirdStartScreen(
+              onTap: () {
+
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SignInScreen(),));
+
+
+              },
+            )
           ]),
     );
   }

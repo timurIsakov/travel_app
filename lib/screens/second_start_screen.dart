@@ -5,7 +5,8 @@ import '../widget/circle_button_widget.dart';
 import '../widget/swape_widget.dart';
 
 class SecondStartScreen extends StatefulWidget {
-  const SecondStartScreen({super.key});
+  final Function() onTap;
+  const SecondStartScreen({super.key, required this.onTap});
 
   @override
   State<SecondStartScreen> createState() => _SecondStartScreenState();
@@ -43,11 +44,7 @@ class _SecondStartScreenState extends State<SecondStartScreen> {
             ),
             const SizedBox(height: 50),
             CircleButtonWidget(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ThirdStartScreen()));
+              onTap: () {widget.onTap.call();
               },
               color: Colors.green,
               icon: Icons.arrow_forward,
