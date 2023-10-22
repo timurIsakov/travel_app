@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/screens/sign_in_screen.dart';
 
 import '../utils/assets.dart';
 import '../widget/swape_widget.dart';

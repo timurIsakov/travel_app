@@ -6,13 +6,15 @@ class InputDataWidget extends StatelessWidget {
   final String labelText;
   final IconData rightIcon;
   final VoidCallback? onPressedIcon;
+  final TextInputType typeKeybord;
   const InputDataWidget(
       {Key? key,
       required this.topRadius,
       required this.bottomRadius,
       required this.labelText,
       required this.rightIcon,
-      this.onPressedIcon})
+      this.onPressedIcon,
+      required this.typeKeybord})
       : super(key: key);
 
   @override
@@ -33,8 +35,11 @@ class InputDataWidget extends StatelessWidget {
           height: 70,
           width: 278,
           child: TextFormField(
+            obscureText:
+                typeKeybord == TextInputType.visiblePassword ? true : false,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
             cursorColor: Colors.black,
-            keyboardType: TextInputType.emailAddress,
+            keyboardType: typeKeybord,
             decoration: InputDecoration(
               border: InputBorder.none,
               labelText: labelText,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/screens/third_start_screen.dart';
 import '../utils/assets.dart';
 import '../widget/circle_button_widget.dart';
 import '../widget/swape_widget.dart';
