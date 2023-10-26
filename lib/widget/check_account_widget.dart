@@ -30,7 +30,7 @@ class _CheckAccountWidgetState extends State<CheckAccountWidget> {
               decoration: BoxDecoration(
                   border: Border.all(width: 1, color: const Color(0xff1F41F4)),
                   borderRadius: BorderRadius.circular(100),
-                  color: const Color(3772).withOpacity(0.1)),
+                  color: const Color(0xff3772FF).withOpacity(0.1)),
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Center(
@@ -79,7 +79,7 @@ class _CheckAccountWidgetState extends State<CheckAccountWidget> {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: isSelect
-                                ? const Color(3772).withOpacity(0.1)
+                                ? const Color(0xff3772FF).withOpacity(0.1)
                                 : Colors.transparent),
                         child: Center(
                           child: Container(
@@ -169,7 +169,7 @@ class _CheckAccountWidgetState extends State<CheckAccountWidget> {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: isSelect
-                                ? const Color(3772).withOpacity(0.1)
+                                ? const Color(0xff3772FF).withOpacity(0.1)
                                 : Colors.transparent),
                         child: Center(
                           child: Container(

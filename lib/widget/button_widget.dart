@@ -29,8 +29,7 @@ class ButtonWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(100),
         ),
         child: Center(
-          child: Text(
-            text,
+          child: Text(text,
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w700,

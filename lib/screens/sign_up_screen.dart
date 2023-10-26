@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:travel_app/screens/verify_email_screen.dart';
+import 'package:travel_app/utils/dialogs.dart';
 import 'package:travel_app/widget/input_data_widget.dart';
 
 import '../widget/button_widget.dart';
@@ -68,11 +69,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ButtonWidget(
                   text: "Done",
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const VerifyEmailScreen(),
-                        ));
+                    Dialogs.dialogBuilder(context);
+
                   },
                 )
               ],

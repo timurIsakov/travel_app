@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/screens/select_region_screen.dart';
 
 import '../utils/assets.dart';
 import '../widget/button_widget.dart';
@@ -45,19 +46,18 @@ class _SuccessfullyEmailScreenState extends State<SuccessfullyEmailScreen> {
               ButtonWidget(
                   width: 326,
                   text: "Done",
-                  color: Color(0xff24B24C),
+                  color: const Color(0xff24B24C),
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => const (),
-                    //     ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SelectRegionScreen(),
+                        ));
                   })
             ],
           ),
         ),
       ),
-
     );
   }
 }
