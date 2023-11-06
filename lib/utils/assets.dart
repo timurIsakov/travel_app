@@ -28,4 +28,10 @@ class Assets {
   static const String tVerifyEmailImage =
       "assets/images/verify_email_image.png";
   static const String tSferaImage = "assets/images/sfera_image.png";
+  static const String tSamCityImage = "assets/images/samcity_image.png";
+  static const String tAvatarFaceIcon = "assets/images/avatar_face_icon.png";
+  static const String tMinskImage = "assets/images/minsk_image.png";
+  static const String tNewYorkImage = "assets/images/new_york_image.png";
+  static const String tTashkentImage = "assets/images/tashkent_image.png";
+  static const String tGirlIcon = "assets/images/girl_icon.jpeg";
 }

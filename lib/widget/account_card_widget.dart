@@ -53,6 +53,7 @@ class AccountCardWidget extends StatelessWidget {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
                     "Hello,",

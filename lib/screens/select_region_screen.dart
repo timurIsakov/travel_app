@@ -68,20 +68,36 @@ class _SelectRegionScreenState extends State<SelectRegionScreen> {
                     width: MediaQuery.sizeOf(context).width,
                   ),
                   Positioned(
-                    right: 95,
-                    bottom: 120,
-                    child: ButtonWidget(
-                      text: "Select now",
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  const StartSelectRegionScreen(),
-                            ));
-                      },
-                    ),
-                  ),
+                      right: 95,
+                      bottom: 120,
+                      child: SizedBox(
+                        height: 56,
+                        width: 200,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const StartSelectRegionScreen(),
+                                ));
+                          },
+                          style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(100)),
+                              backgroundColor: const Color(0xff1F41F4)),
+                          child: const Center(
+                            child: Text(
+                              "Select now",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )),
                   Positioned(
                     top: 353,
                     left: 162.5,

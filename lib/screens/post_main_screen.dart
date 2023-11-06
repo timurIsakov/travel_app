@@ -8,29 +8,37 @@ import '../widget/account_card_widget.dart';
 class PostMainScreen extends StatefulWidget {
   const PostMainScreen({super.key});
 
-
-
   @override
   State<PostMainScreen> createState() => _PostMainScreenState();
-
 }
 
 class _PostMainScreenState extends State<PostMainScreen> {
-
   List<PostEntity> listEntity = [
-    PostEntity(widget: const Icon(Icons.person), city: 'Smarqand', photo: Assets.tHomeImage, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-    PostEntity(widget: const Icon(Icons.person), city: 'Amerika', photo: Assets.tHomeImage, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-    PostEntity(widget: const Icon(Icons.person), city: 'NewTork', photo: Assets.tHomeImage, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-    PostEntity(widget: const Icon(Icons.person), city: 'Tashkent', photo: Assets.tHomeImage, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-    PostEntity(widget: const Icon(Icons.person), city: 'Minsk', photo: Assets.tHomeImage, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-    PostEntity(widget: const Icon(Icons.person), city: 'Moscow', photo: Assets.tHomeImage, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-    PostEntity(widget: const Icon(Icons.person), city: 'Italia', photo: Assets.tHomeImage, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-    PostEntity(widget: const Icon(Icons.person), city: 'USA', photo: Assets.tHomeImage, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
-
+    PostEntity(
+        widget: Image.asset(Assets.tAvatarFaceIcon),
+        city: 'Samarqand',
+        photo: Assets.tSamCityImage,
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
+    PostEntity(
+        widget: Image.asset(Assets.tAvatarFaceIcon),
+        city: 'Minsk',
+        photo: Assets.tMinskImage,
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
+    PostEntity(
+        widget: Image.asset(Assets.tAvatarFaceIcon),
+        city: 'NewYork',
+        photo: Assets.tNewYorkImage,
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
+    PostEntity(
+        widget: Image.asset(Assets.tAvatarFaceIcon),
+        city: 'Tashkent',
+        photo: Assets.tTashkentImage,
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
   ];
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -38,18 +46,19 @@ class _PostMainScreenState extends State<PostMainScreen> {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(left: 16,right: 16),
+            padding: const EdgeInsets.only(left: 16, right: 16),
             child: Column(
               children: [
-                const AccountCardWidget(image: Assets.tHomeImage, name: "Samms"),
-
+                const AccountCardWidget(image: Assets.tGirlIcon, name: "Samms"),
+                const SizedBox(height: 5),
                 Expanded(
                   child: ListView.builder(
                     itemCount: listEntity.length,
-                      itemBuilder: (context, index) {
-                        final entity = listEntity[index];
-                        return PostCardWidget(postEntity: entity);
-                      },),
+                    itemBuilder: (context, index) {
+                      final entity = listEntity[index];
+                      return PostCardWidget(postEntity: entity);
+                    },
+                  ),
                   // child: SingleChildScrollView(
                   //   scrollDirection: Axis.vertical,
                   //   child: Column(children: [

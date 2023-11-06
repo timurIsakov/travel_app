@@ -47,17 +47,16 @@ class PostCardWidget extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                InkWell(
-                  onTap: () {},
-                  borderRadius: BorderRadius.circular(100),
-                  child: Ink(
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle, color: Color(0xffF4F5F6)),
-                    height: 40,
-                    width: 40,
-                    child: const Icon(Icons.arrow_forward),
+                Container(
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Color(0xffF4F5F6)),
+                  height: 40,
+                  width: 40,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_forward),
                   ),
-                )
+                ),
               ],
             ),
             const SizedBox(height: 24),

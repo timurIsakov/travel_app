@@ -30,7 +30,7 @@ class _StartSelectRegionScreenState extends State<StartSelectRegionScreen> {
               child: Column(
                 children: [
                   AccountCardWidget(
-                    image: Assets.tHomeImage,
+                    image: Assets.tGirlIcon,
                     name: 'Samms',
                     gradient: LinearGradient(
                       colors: [
